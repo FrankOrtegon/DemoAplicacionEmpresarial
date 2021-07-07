@@ -13,7 +13,7 @@ import static org.springframework.web.reactive.function.server.RequestPredicates
 import static org.springframework.web.reactive.function.server.RouterFunctions.route;
 
 @Configuration
-public class CrearQuestionRouter{
+public class CreateQuestionRouter {
 
     @Bean
     public RouterFunction<ServerResponse> crearQuestion(CreateUseCase createUseCase) {
