@@ -17,11 +17,11 @@ public class CreateQuestionRouter {
 
     @Bean
     public RouterFunction<ServerResponse> crearQuestion(CreateUseCase createUseCase) {
-        return route(POST("/crearquestion").and(accept(MediaType.APPLICATION_JSON)),//uso json
+        return route(POST("/crearquestion").and(accept(MediaType.APPLICATION_JSON)),
                 request -> request.bodyToMono(QuestionDTO.class)
                         .flatMap(questionDTO -> createUseCase.insertar(questionDTO)
                                 .flatMap(result -> ServerResponse.ok()
-                                        .contentType(MediaType.APPLICATION_JSON)//tipo respuesta texto plano o json
+                                        .contentType(MediaType.APPLICATION_JSON)
                                         .bodyValue(result))
                         )
         );
