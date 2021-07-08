@@ -1,6 +1,6 @@
 package co.com.sofka.questions.router;
 
-import co.com.sofka.questions.collections.Question;
+
 import co.com.sofka.questions.model.QuestionDTO;
 import co.com.sofka.questions.usecase.GetUseCase;
 import org.springframework.context.annotation.Bean;
